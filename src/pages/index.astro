@@ -1,0 +1,95 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Clinical Sbelt / Dr. Toufic Ghattas."> 
+	<main>
+		<div class="flex justify-center align-center space-x-1" >
+			<div>Iniciar Session</div>
+			<h1 class="text-gradient">Clinical Sbelt</h1>
+			<svg class="icon icon-tabler icon-tabler-layout-sidebar-right-expand" width="30" height="30" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+				<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+				<path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+				<path d="M15 4v16"></path>
+				<path d="M10 10l-2 2l2 2"></path>
+			 </svg>
+		</div>
+		<p class="instructions">
+			"Transformando vidas con precisión y belleza".<br />
+			<code>Dr. Toufic Ghattas</code>
+		</p>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="https://docs.astro.build/"
+				title="Ingresar"
+				body="Dejame saber un poco más de ti."
+			/>
+			<Card
+				href="https://astro.build/integrations/"
+				title="Mis Pacientes, Mis Modelos"
+				body="Puedes ver los resultados inmediatos."
+			/>
+			<Card
+				href="https://www.instagram.com/drtouficghattas/?hl=es/"
+				title="Instagram"
+				body="Sigueme para estar actualizado en todo lo relacionado con salud y Belleza. ❤️"
+			/>
+			<Card
+				href="https://astro.build/chat/"
+				title="Comunidad de Medicos en Venezuela"
+				body="Come say hi to our amazing Discord community. "
+			/>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>
